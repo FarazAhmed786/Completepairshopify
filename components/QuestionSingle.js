@@ -6,11 +6,13 @@ import axios from 'axios';
 import {useState} from 'react';
 import { MinusCircledIcon } from '@radix-ui/react-icons';
 
-export default function TeamSingle({name,slug,id,updateTeams}) {
+export default function QuestionSingle({name,slug,id,updateTeams,Feilds}) {
+    console.log("ccccccccccc",Feilds);
     const accessToken = getAccessToken();
     const host = window.sessionStorage.getItem("host");
     const shop = window.sessionStorage.getItem("shop");
     const [membersModalActive,setMembersModalAcitve] = useState(false)
+    
     const handleDeleteTeam = async(e) => {
         const teamId = e.target.dataset.teamId;
         try{
@@ -45,7 +47,17 @@ export default function TeamSingle({name,slug,id,updateTeams}) {
                 
             </div>
         </div>
+        {Feilds.map((v,i)=>{
+            return  <div >
+                        <input type="radio" id="html" name="fav_language" value="Yes" />
+                        <label for="html">Yes</label>
+                        <input type="radio" id="css" name="fav_language" value="NO" />
+                        <label for="css">NO</label>
+                        
+                    </div>
+         })} 
         
     </li>
+    
   )
 }
