@@ -50,22 +50,22 @@ const Questionaiire = () => {
   
   const createQuestion = async(data) => {
       console.log('dddddddddddddddddd', data)
-    //   try{
-    //       const response = await axios.post(TEAMS,{name:data.team_name},{headers:{Authorization:accessToken}})
-    //       setModalError('');
-    //       setTeamModalActive(false)
-    //       setUpdateTeams(response);
-    //   }catch(err){
-    //       const errorStatus = err.toJSON().status
-    //       switch(errorStatus){
-    //           case 409:
-    //               setModalError('Team with this name already exists.')
-    //               break;
-    //           default:
-    //               setModalError('There was a problem creating the team, please try again.')
-    //               break;
-    //       }
-    //   }
+      try{
+          const response = await axios.post(Question,{"Question": data,"type":"radio", "label": "radio_button", "subtype": "radio", },{headers:{Authorization:accessToken}})
+          setModalError('');
+          setTeamModalActive(false)
+          setUpdateTeams(response);
+      }catch(err){
+          const errorStatus = err.toJSON().status
+          switch(errorStatus){
+              case 409:
+                  setModalError('Team with this name already exists.')
+                  break;
+              default:
+                  setModalError('There was a problem creating the team, please try again.')
+                  break;
+          }
+      }
   }
   function  addfeildds() {
     
@@ -78,14 +78,14 @@ const Questionaiire = () => {
         value:"",
     }
     arr.push(addans);
-    console.log('aaaaaaaaaaaaaaaaaaaaaa',arr);
+    
         
     }
   useEffect(()=>{
     getQuestion();
   },[updateQuestion])
   useEffect(()=>{
-    
+    console.log('aaaaaaaaaaaaaaaaaaaaaa',arr);
   },[SetArray])
 
 
