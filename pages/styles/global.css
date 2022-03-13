@@ -61,6 +61,19 @@ p.error-login-form {
     width: 100%;
 }
 
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 button.button-brand {
     background: #000;
     color: #fff;
