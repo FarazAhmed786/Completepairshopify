@@ -63,17 +63,12 @@ p.error-login-form {
 
 .column {
     float: left;
-    width: 33.33%;
-    padding: 5px;
+    width: 23.33%;
+    padding: 15px;
+    
   }
   
-  /* Clear floats after image containers */
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
+  
 button.button-brand {
     background: #000;
     color: #fff;

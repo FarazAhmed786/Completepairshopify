@@ -1,9 +1,9 @@
 export default function Dashboarimages(){
     
     return (
+        <div className="flex justify-center w-full">
         
-        <div class="row">
-            <div class="column">
+            <div class="column ">
                 <img src="/images/Artboard 4.png" width="100%"></img>
             </div>
             <div class="column">
@@ -12,7 +12,8 @@ export default function Dashboarimages(){
             <div class="column">
                 <img src="/images/Artboard 2.png" width="100%"></img>
             </div>
-        </div>
+       
+    </div>
         
         
       
