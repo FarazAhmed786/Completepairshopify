@@ -50,7 +50,7 @@ export default function SideNavigation({children}){
                             const isActive = router.pathname == link.href || router.pathname.includes(link.href) ? 'active' : '';
                             return (
                             <Link href={link.href}>
-                                <a className={isActive + ' flex dashboard__sidebar__links text-neutral-900 group flex items-center px-2 py-3 text-sm font-medium'}>{link.icon()}<span className="hidden lg:inline ml-2">{link.text}</span></a>
+                                <a className={isActive + ' flex dashboard__sidebar__links text-neutral-900 group flex items-center px-2 py-3 text-sm font-medium'}>{link.icon()}<span className="hidden ml-2 lg:inline">{link.text}</span></a>
                             </Link>
                             )
                         })}
